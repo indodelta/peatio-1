@@ -11,9 +11,9 @@ require 'mina/slack/tasks'
 # set :domain, 'demo.peat.io'
 require "rvm/capistrano"
 require "bundler/capistrano"
-set :application, "107.170.114.144"
-set :deploy_to, "/home//root/peatio/#{application}"
-set :repository,  "git@github.com:sachinshar/Pixsume_Prod.git"
+set :application, "104.131.224.194"
+set :deploy_to, "/home/root/peatio/#{application}"
+set :repository,  "git@github.com:sandy1987/peatio.git"
 set :port, 3000
 set :use_sudo, true
 set :user_sudo, false

@@ -65,7 +65,8 @@ gem 'easy_table'
 gem 'ransack', git: 'https://github.com/activerecord-hackery/ransack.git', branch: 'rails-4'
 gem 'phonelib'
 gem 'twilio-ruby', '~> 3.11'
-
+gem 'capistrano'
+gem 'rvm-capistrano'
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
@@ -95,3 +96,5 @@ group :test do
 end
 
 gem 'unicorn'
+
+
