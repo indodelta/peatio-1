@@ -10,7 +10,6 @@ set :user_sudo, false
 set :rails_env, "production" # sets your server environment to Production mode
 set :ssh_options, { :forward_agent => true }
 set :scm, :git  # sets version control
-
 default_run_options[:pty] = true
 set :user, "root"
 role :web, application
