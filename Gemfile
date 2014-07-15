@@ -67,6 +67,7 @@ gem 'phonelib'
 gem 'twilio-ruby', '~> 3.11'
 gem 'capistrano'
 gem 'rvm-capistrano'
+gem 'net-ssh'
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
