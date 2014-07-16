@@ -262,8 +262,6 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     mysql2 (0.3.16)
-    net-scp (1.2.1)
-      net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
     nilio (1.0.0)
     nokogiri (1.6.2.1)
@@ -420,8 +418,6 @@ GEM
       sprockets (~> 2.8)
     sshkit (1.5.1)
       colorize
-      net-scp (>= 1.1.2)
-      net-ssh (>= 2.8.0)
     structured_warnings (0.1.4)
     temple (0.6.8)
     therubyracer (0.12.1)
@@ -520,6 +516,7 @@ DEPENDENCIES
   mocha
   momentjs-rails
   mysql2
+  net-ssh
   omniauth
   omniauth-identity
   paper_trail (~> 3.0.1)

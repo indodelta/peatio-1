@@ -1,6 +1,6 @@
 
 # config valid only for Capistrano 3.1
-# require 'capistrano/setup'
+#require 'capistrano/setup'
 
 # # Includes default deployment tasks
    require 'capistrano/deploy'
@@ -16,10 +16,12 @@
 Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
 #require "bundler/capistrano"
 lock '3.2.1'
-
+#server "104.131.224.194", user: "depoy-user", roles: %w{web app}
 set :stage, :production
 set :application, '104.131.224.194'
 set :repo_url, 'git@github.com:sandy1987/peatio.git'
+set :ssh_options, {:forward_agent => true, :auth_methods => 'publickey'}
+
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -41,15 +43,15 @@ set :repo_url, 'git@github.com:sandy1987/peatio.git'
  set :ssh_options, {:forward_agent => true}
  set :default_run_options, {:pty => true}
 
- set :user, "root"
- role :web, "104.131.224.194"
- role :app, "104.131.224.194"
- role :db,  "104.131.224.194", :primary => true
+ # set :user, "root"
+ # role :web, "104.131.224.194"
+ # role :app, "104.131.224.194"
+ # role :db,  "104.131.224.194", :primary => true
 
 after "deploy:restart", "deploy:cleanup"
  after "deploy:migrate", "deploy:migrate"
  #after "deploy", "rvm:trust_rvmrc"
-
+ 
 # Default value for :linked_files is []
 # set :linked_files, %w{config/database.yml}
 
