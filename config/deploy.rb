@@ -1,57 +1,52 @@
 
-# config valid only for Capistrano 3.1
-#require 'capistrano/setup'
-
 # # Includes default deployment tasks
-   require 'capistrano/deploy'
-#   require 'rvm1/capistrano3'
-   require 'capistrano/rvm'
+#    require 'capistrano/deploy'
+# #   require 'rvm1/capistrano3'
+#    require 'capistrano/rvm'
 # # # require 'capistrano/rbenv'
 # # # require 'capistrano/chruby'
-   require 'capistrano/bundler'
-   require 'capistrano/rails/assets'
-   require 'capistrano/rails/migrations'
+  # require 'capistrano/bundler'
+  # require 'capistrano/rails/assets'
+  # require 'capistrano/rails/migrations'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
 Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
 #require "bundler/capistrano"
 lock '3.2.1'
-#server "104.131.224.194", user: "depoy-user", roles: %w{web app}
+
 set :stage, :production
 set :application, '104.131.224.194'
 set :repo_url, 'git@github.com:sandy1987/peatio.git'
-set :ssh_options, {:forward_agent => true, :auth_methods => 'publickey'}
-
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
- set :deploy_to, '/home/root/peatio'
+set :deploy_to, '/home/deploy/peatio'
 
 # Default value for :scm is :git
- set :scm, :git
+set :scm, :git
 
 # Default value for :format is :pretty
- set :format, :pretty
+set :format, :pretty
 
 # Default value for :log_level is :debug
- set :log_level, :debug
+set :log_level, :debug
 
 # Default value for :pty is false
- #set :pty, true
- set :ssh_options, {:forward_agent => true}
- set :default_run_options, {:pty => true}
-
- # set :user, "root"
- # role :web, "104.131.224.194"
- # role :app, "104.131.224.194"
- # role :db,  "104.131.224.194", :primary => true
+#set :pty, true
+set :ssh_options, {:forward_agent => true}
+set :default_run_options, {:pty => true}
+set :rvm1_ruby_version, "ruby 2.1.2p95"
+set :user, "deploy"
+role :web, "104.131.224.194"
+role :app, "104.131.224.194"
+role :db,  "104.131.224.194", :primary => true
 
 after "deploy:restart", "deploy:cleanup"
- after "deploy:migrate", "deploy:migrate"
- #after "deploy", "rvm:trust_rvmrc"
- 
+after "deploy:migrate", "deploy:migrate"
+#after "deploy", "rvm:trust_rvmrc"
+
 # Default value for :linked_files is []
 # set :linked_files, %w{config/database.yml}
 
@@ -59,7 +54,7 @@ after "deploy:restart", "deploy:cleanup"
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+ set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
 set :keep_releases, 5
@@ -67,6 +62,7 @@ SSHKit.config.output = $stdout
 SSHKit.config.output_verbosity = Logger::DEBUG
 SSHKit.config.command_map[:rake] = "bundle exec rake"
 SSHKit.config.command_map[:rails] = "bundle exec rails"
+
 namespace :deploy do
 
   desc 'Restart application'
