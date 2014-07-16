@@ -1,0 +1,65 @@
+peatio:amqp:order_processor:1: process with pid 16686 started.
+/home/yuva/.rvm/gems/ruby-2.1.1/gems/amq-protocol-1.9.2/lib/amq/protocol/frame.rb:64:in `decode_header': Must be one of [:method, :headers, :body, :heartbeat] (AMQ::Protocol::FrameTypeError)
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/bunny-1.2.1/lib/bunny/transport.rb:208:in `read_next_frame'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/bunny-1.2.1/lib/bunny/session.rb:923:in `init_connection'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/bunny-1.2.1/lib/bunny/session.rb:254:in `start'
+	from /home/yuva/Desktop/arvind/peatio/peatio-master/lib/daemons/amqp_daemon.rb:17:in `<top (required)>'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `load'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `start_load'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/application.rb:298:in `start'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/controller.rb:70:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons.rb:147:in `block in run'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `call'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `catch_exceptions'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons.rb:146:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-rails-1.2.1/lib/daemons/rails.rb:16:in `run'
+	from lib/daemons/order_processor_ctl:17:in `block in <main>'
+	from lib/daemons/order_processor_ctl:7:in `times'
+	from lib/daemons/order_processor_ctl:7:in `<main>'
+peatio:amqp:order_processor:1: process with pid 22115 started.
+I, [2014-07-10T17:56:53.869547 #22115]  INFO -- : Connected to AMQP broker (prefetch: 5)
+peatio:amqp:order_processor:1: process with pid 2950 started.
+I, [2014-07-10T18:08:39.798306 #2950]  INFO -- : Connected to AMQP broker (prefetch: 5)
+I, [2014-07-10T18:36:38.227735 #2950]  INFO -- : Received: {"action":"cancel","order":{"id":10,"timestamp":1404996303,"type":"bid","volume":"2.0","price":"6.0","market":"btccny","ord_type":"limit"}}
+Order#10 cancelled.
+I, [2014-07-10T18:37:31.506351 #2950]  INFO -- : Received: {"action":"cancel","order":{"id":5,"timestamp":1404990996,"type":"ask","volume":"1.0","price":"34.0","market":"btccny","ord_type":"limit"}}
+Order#5 cancelled.
+I, [2014-07-10T18:37:31.820764 #2950]  INFO -- : Received: {"action":"cancel","order":{"id":3,"timestamp":1404990792,"type":"bid","volume":"3.0","price":"4.0","market":"btccny","ord_type":"limit"}}
+Order#3 cancelled.
+I, [2014-07-10T18:37:32.169534 #2950]  INFO -- : Received: {"action":"cancel","order":{"id":2,"timestamp":1404990767,"type":"bid","volume":"10.0","price":"3.0","market":"btccny","ord_type":"limit"}}
+Order#2 cancelled.
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `join': Connection-level error: CONNECTION_FORCED - broker forced connection closure with reason 'shutdown' (Bunny::ConnectionForced)
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `block in join'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `each'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `join'
+	from /home/yuva/Desktop/arvind/peatio/peatio-master/lib/daemons/amqp_daemon.rb:80:in `<top (required)>'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `load'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `start_load'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:298:in `start'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/controller.rb:70:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons.rb:147:in `block in run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `call'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `catch_exceptions'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons.rb:146:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-rails-1.2.1/lib/daemons/rails.rb:16:in `run'
+	from lib/daemons/order_processor_ctl:17:in `block in <main>'
+	from lib/daemons/order_processor_ctl:7:in `times'
+	from lib/daemons/order_processor_ctl:7:in `<main>'
+peatio:amqp:order_processor:1: process with pid 25164 started.
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/transport.rb:247:in `rescue in initialize_socket': Could not establish TCP connection to 127.0.0.1:5672:  (Bunny::TCPConnectionFailed)
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/transport.rb:241:in `initialize_socket'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/transport.rb:254:in `maybe_initialize_socket'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/session.rb:245:in `start'
+	from /home/yuva/Desktop/arvind/peatio/peatio-master/lib/daemons/amqp_daemon.rb:17:in `<top (required)>'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `load'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `start_load'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:298:in `start'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/controller.rb:70:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons.rb:147:in `block in run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `call'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `catch_exceptions'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons.rb:146:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-rails-1.2.1/lib/daemons/rails.rb:16:in `run'
+	from lib/daemons/order_processor_ctl:17:in `block in <main>'
+	from lib/daemons/order_processor_ctl:7:in `times'
+	from lib/daemons/order_processor_ctl:7:in `<main>'

@@ -1,0 +1,68 @@
+peatio:amqp:pusher:1: process with pid 16848 started.
+/home/yuva/.rvm/gems/ruby-2.1.1/gems/amq-protocol-1.9.2/lib/amq/protocol/frame.rb:64:in `decode_header': Must be one of [:method, :headers, :body, :heartbeat] (AMQ::Protocol::FrameTypeError)
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/bunny-1.2.1/lib/bunny/transport.rb:208:in `read_next_frame'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/bunny-1.2.1/lib/bunny/session.rb:923:in `init_connection'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/bunny-1.2.1/lib/bunny/session.rb:254:in `start'
+	from /home/yuva/Desktop/arvind/peatio/peatio-master/lib/daemons/amqp_daemon.rb:17:in `<top (required)>'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `load'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `start_load'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/application.rb:298:in `start'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/controller.rb:70:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons.rb:147:in `block in run'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `call'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `catch_exceptions'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons.rb:146:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-rails-1.2.1/lib/daemons/rails.rb:16:in `run'
+	from lib/daemons/pusher_ctl:18:in `block in <main>'
+	from lib/daemons/pusher_ctl:8:in `times'
+	from lib/daemons/pusher_ctl:8:in `<main>'
+peatio:amqp:pusher:1: process with pid 22212 started.
+peatio:amqp:pusher:1: process with pid 3363 started.
+I, [2014-07-10T18:12:12.872103 #3363]  INFO -- : Connected to AMQP broker (prefetch: default)
+I, [2014-07-10T18:15:03.677258 #3363]  INFO -- : Received: {"member_id":1,"event":"order","data":"{\"id\":10,\"at\":1404996303,\"market\":\"btccny\",\"kind\":\"bid\",\"price\":\"6.0\",\"state\":\"wait\",\"state_text\":\"WAIT\",\"volume\":\"2.0\",\"origin_volume\":\"2.0\"}"}
+I, [2014-07-10T18:19:12.600169 #3363]  INFO -- : Received: {"member_id":1,"event":"order","data":"{\"id\":11,\"at\":1404996552,\"market\":\"btccny\",\"kind\":\"ask\",\"price\":\"30.0\",\"state\":\"wait\",\"state_text\":\"WAIT\",\"volume\":\"2.0\",\"origin_volume\":\"2.0\"}"}
+I, [2014-07-10T18:22:03.163931 #3363]  INFO -- : Received: {"member_id":4,"event":"order","data":"{\"id\":12,\"at\":1404996722,\"market\":\"btccny\",\"kind\":\"ask\",\"price\":\"8.0\",\"state\":\"wait\",\"state_text\":\"WAIT\",\"volume\":\"2.0\",\"origin_volume\":\"2.0\"}"}
+I, [2014-07-10T18:22:09.187575 #3363]  INFO -- : Received: {"member_id":4,"event":"order","data":"{\"id\":9,\"at\":1404994085,\"market\":\"btccny\",\"kind\":\"bid\",\"price\":\"22.0\",\"state\":\"done\",\"state_text\":\"DONE\",\"volume\":\"0.0\",\"origin_volume\":\"2.0\"}"}
+I, [2014-07-10T18:22:09.190941 #3363]  INFO -- : Received: {"member_id":4,"event":"order","data":"{\"id\":12,\"at\":1404996722,\"market\":\"btccny\",\"kind\":\"ask\",\"price\":\"8.0\",\"state\":\"done\",\"state_text\":\"DONE\",\"volume\":\"0.0\",\"origin_volume\":\"2.0\"}"}
+I, [2014-07-10T18:22:09.331674 #3363]  INFO -- : Received: {"id":5,"price":"22.0","volume":"2.0","ask_id":12,"bid_id":9,"trend":"down","currency":"btccny","created_at":"2014-07-10T12:52:07.125Z","updated_at":"2014-07-10T12:52:07.125Z","ask_member_id":4,"bid_member_id":4,"funds":"44.0"}
+I, [2014-07-10T18:37:31.507377 #3363]  INFO -- : Received: {"member_id":1,"event":"order","data":"{\"id\":10,\"at\":1404996303,\"market\":\"btccny\",\"kind\":\"bid\",\"price\":\"6.0\",\"state\":\"cancel\",\"state_text\":\"CANCEL\",\"volume\":\"2.0\",\"origin_volume\":\"2.0\"}"}
+I, [2014-07-10T18:37:31.821898 #3363]  INFO -- : Received: {"member_id":1,"event":"order","data":"{\"id\":5,\"at\":1404990996,\"market\":\"btccny\",\"kind\":\"ask\",\"price\":\"34.0\",\"state\":\"cancel\",\"state_text\":\"CANCEL\",\"volume\":\"1.0\",\"origin_volume\":\"3.0\"}"}
+I, [2014-07-10T18:37:32.169935 #3363]  INFO -- : Received: {"member_id":1,"event":"order","data":"{\"id\":3,\"at\":1404990792,\"market\":\"btccny\",\"kind\":\"bid\",\"price\":\"4.0\",\"state\":\"cancel\",\"state_text\":\"CANCEL\",\"volume\":\"3.0\",\"origin_volume\":\"4.0\"}"}
+I, [2014-07-10T18:37:32.435764 #3363]  INFO -- : Received: {"member_id":1,"event":"order","data":"{\"id\":2,\"at\":1404990767,\"market\":\"btccny\",\"kind\":\"bid\",\"price\":\"3.0\",\"state\":\"cancel\",\"state_text\":\"CANCEL\",\"volume\":\"10.0\",\"origin_volume\":\"10.0\"}"}
+I, [2014-07-10T19:11:36.928845 #3363]  INFO -- : Received: {"member_id":5,"event":"account","data":"{\"balance\":\"0.0\",\"locked\":\"0.0\",\"currency\":\"cny\"}"}
+I, [2014-07-10T19:11:37.504521 #3363]  INFO -- : Received: {"member_id":5,"event":"account","data":"{\"balance\":\"0.0\",\"locked\":\"0.0\",\"currency\":\"btc\"}"}
+I, [2014-07-10T19:12:32.782542 #3363]  INFO -- : Received: {"member_id":5,"event":"order","data":"{\"id\":13,\"at\":1404999752,\"market\":\"btccny\",\"kind\":\"bid\",\"price\":\"40.0\",\"state\":\"wait\",\"state_text\":\"WAIT\",\"volume\":\"2.5\",\"origin_volume\":\"2.5\"}"}
+I, [2014-07-10T19:12:44.092746 #3363]  INFO -- : Received: {"member_id":5,"event":"order","data":"{\"id\":13,\"at\":1404999752,\"market\":\"btccny\",\"kind\":\"bid\",\"price\":\"40.0\",\"state\":\"wait\",\"state_text\":\"WAIT\",\"volume\":\"0.5\",\"origin_volume\":\"2.5\"}"}
+I, [2014-07-10T19:12:44.384910 #3363]  INFO -- : Received: {"member_id":1,"event":"order","data":"{\"id\":11,\"at\":1404996552,\"market\":\"btccny\",\"kind\":\"ask\",\"price\":\"30.0\",\"state\":\"done\",\"state_text\":\"DONE\",\"volume\":\"0.0\",\"origin_volume\":\"2.0\"}"}
+I, [2014-07-10T19:12:44.809258 #3363]  INFO -- : Received: {"id":6,"price":"30.0","volume":"2.0","ask_id":11,"bid_id":13,"trend":"up","currency":"btccny","created_at":"2014-07-10T13:42:41.062Z","updated_at":"2014-07-10T13:42:41.062Z","ask_member_id":1,"bid_member_id":5,"funds":"60.0"}
+I, [2014-07-10T19:12:53.174912 #3363]  INFO -- : Received: {"member_id":5,"event":"order","data":"{\"id\":14,\"at\":1404999772,\"market\":\"btccny\",\"kind\":\"bid\",\"price\":\"5.0\",\"state\":\"wait\",\"state_text\":\"WAIT\",\"volume\":\"10.0\",\"origin_volume\":\"10.0\"}"}
+I, [2014-07-10T19:13:05.709437 #3363]  INFO -- : Received: {"member_id":5,"event":"order","data":"{\"id\":15,\"at\":1404999785,\"market\":\"btccny\",\"kind\":\"ask\",\"price\":\"4.0\",\"state\":\"wait\",\"state_text\":\"WAIT\",\"volume\":\"200.0\",\"origin_volume\":\"200.0\"}"}
+I, [2014-07-10T19:13:07.809609 #3363]  INFO -- : Received: {"member_id":5,"event":"order","data":"{\"id\":13,\"at\":1404999752,\"market\":\"btccny\",\"kind\":\"bid\",\"price\":\"40.0\",\"state\":\"done\",\"state_text\":\"DONE\",\"volume\":\"0.0\",\"origin_volume\":\"2.5\"}"}
+I, [2014-07-10T19:13:07.824014 #3363]  INFO -- : Received: {"member_id":5,"event":"order","data":"{\"id\":15,\"at\":1404999785,\"market\":\"btccny\",\"kind\":\"ask\",\"price\":\"4.0\",\"state\":\"wait\",\"state_text\":\"WAIT\",\"volume\":\"199.5\",\"origin_volume\":\"200.0\"}"}
+I, [2014-07-10T19:13:07.976296 #3363]  INFO -- : Received: {"id":7,"price":"40.0","volume":"0.5","ask_id":15,"bid_id":13,"trend":"up","currency":"btccny","created_at":"2014-07-10T13:43:06.417Z","updated_at":"2014-07-10T13:43:06.417Z","ask_member_id":5,"bid_member_id":5,"funds":"20.0"}
+I, [2014-07-10T19:13:09.698804 #3363]  INFO -- : Received: {"member_id":5,"event":"order","data":"{\"id\":14,\"at\":1404999772,\"market\":\"btccny\",\"kind\":\"bid\",\"price\":\"5.0\",\"state\":\"done\",\"state_text\":\"DONE\",\"volume\":\"0.0\",\"origin_volume\":\"10.0\"}"}
+I, [2014-07-10T19:13:09.949970 #3363]  INFO -- : Received: {"member_id":5,"event":"order","data":"{\"id\":15,\"at\":1404999785,\"market\":\"btccny\",\"kind\":\"ask\",\"price\":\"4.0\",\"state\":\"wait\",\"state_text\":\"WAIT\",\"volume\":\"189.5\",\"origin_volume\":\"200.0\"}"}
+I, [2014-07-10T19:13:10.160757 #3363]  INFO -- : Received: {"id":8,"price":"5.0","volume":"10.0","ask_id":15,"bid_id":14,"trend":"down","currency":"btccny","created_at":"2014-07-10T13:43:07.993Z","updated_at":"2014-07-10T13:43:07.993Z","ask_member_id":5,"bid_member_id":5,"funds":"50.0"}
+I, [2014-07-10T19:13:16.867068 #3363]  INFO -- : Received: {"member_id":5,"event":"order","data":"{\"id\":16,\"at\":1404999796,\"market\":\"btccny\",\"kind\":\"ask\",\"price\":\"6.0\",\"state\":\"wait\",\"state_text\":\"WAIT\",\"volume\":\"22.0\",\"origin_volume\":\"22.0\"}"}
+peatio:amqp:pusher:1: process with pid 25312 started.
+I, [2014-07-14T17:39:51.951853 #25312]  INFO -- : Connected to AMQP broker (prefetch: default)
+I, [2014-07-14T17:49:18.133887 #25312]  INFO -- : Received: {"member_id":1,"event":"order","data":"{\"id\":34,\"at\":1405340357,\"market\":\"btccny\",\"kind\":\"bid\",\"price\":\"2.0\",\"state\":\"wait\",\"state_text\":\"WAIT\",\"volume\":\"2.0\",\"origin_volume\":\"2.0\"}"}
+I, [2014-07-14T17:50:42.525427 #25312]  INFO -- : Received: {"member_id":1,"event":"order","data":"{\"id\":35,\"at\":1405340441,\"market\":\"btccny\",\"kind\":\"bid\",\"price\":\"2.0\",\"state\":\"wait\",\"state_text\":\"WAIT\",\"volume\":\"3.0\",\"origin_volume\":\"3.0\"}"}
+I, [2014-07-14T17:50:47.864059 #25312]  INFO -- : Received: {"member_id":1,"event":"order","data":"{\"id\":36,\"at\":1405340447,\"market\":\"btccny\",\"kind\":\"ask\",\"price\":\"2.0\",\"state\":\"wait\",\"state_text\":\"WAIT\",\"volume\":\"32.0\",\"origin_volume\":\"32.0\"}"}
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `join': Connection-level error: CONNECTION_FORCED - broker forced connection closure with reason 'shutdown' (Bunny::ConnectionForced)
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `block in join'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `each'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `join'
+	from /home/yuva/Desktop/arvind/peatio/peatio-master/lib/daemons/amqp_daemon.rb:80:in `<top (required)>'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `load'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `start_load'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:298:in `start'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/controller.rb:70:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons.rb:147:in `block in run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `call'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `catch_exceptions'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons.rb:146:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-rails-1.2.1/lib/daemons/rails.rb:16:in `run'
+	from lib/daemons/pusher_ctl:18:in `block in <main>'
+	from lib/daemons/pusher_ctl:8:in `times'
+	from lib/daemons/pusher_ctl:8:in `<main>'

@@ -1,0 +1,223 @@
+peatio:amqp:matching: process with pid 16774 started.
+/home/yuva/.rvm/gems/ruby-2.1.1/gems/amq-protocol-1.9.2/lib/amq/protocol/frame.rb:64:in `decode_header': Must be one of [:method, :headers, :body, :heartbeat] (AMQ::Protocol::FrameTypeError)
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/bunny-1.2.1/lib/bunny/transport.rb:208:in `read_next_frame'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/bunny-1.2.1/lib/bunny/session.rb:923:in `init_connection'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/bunny-1.2.1/lib/bunny/session.rb:254:in `start'
+	from /home/yuva/Desktop/arvind/peatio/peatio-master/lib/daemons/amqp_daemon.rb:17:in `<top (required)>'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `load'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `start_load'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/application.rb:298:in `start'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/controller.rb:70:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons.rb:147:in `block in run'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `call'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `catch_exceptions'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons.rb:146:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-rails-1.2.1/lib/daemons/rails.rb:16:in `run'
+	from lib/daemons/matching_ctl:11:in `<main>'
+peatio:amqp:matching: process with pid 21834 started.
+I, [2014-07-10T17:52:44.202685 #21834]  INFO -- : Connected to AMQP broker (prefetch: default)
+D, [2014-07-10T17:52:44.203185 #21834] DEBUG -- : orderbook broadcast: {:action=>"new", :market=>"btccny", :side=>:ask}
+D, [2014-07-10T17:52:44.249109 #21834] DEBUG -- : orderbook broadcast: {:action=>"new", :market=>"btccny", :side=>:bid}
+D, [2014-07-10T17:52:44.480101 #21834] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>1, :timestamp=>1404990591, :type=>:bid, :volume=>#<BigDecimal:de94014,'0.2E1',9(27)>, :price=>#<BigDecimal:de94168,'0.23E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-10T17:52:44.480664 #21834] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>2, :timestamp=>1404990767, :type=>:bid, :volume=>#<BigDecimal:debf69c,'0.1E2',9(27)>, :price=>#<BigDecimal:debf764,'0.3E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-10T17:52:44.481088 #21834] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>3, :timestamp=>1404990792, :type=>:bid, :volume=>#<BigDecimal:debedc8,'0.4E1',9(27)>, :price=>#<BigDecimal:debef6c,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-10T17:52:44.481542 #21834] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>1, :timestamp=>1404990591, :type=>:bid, :volume=>#<BigDecimal:d704844,'0.0',9(18)>, :price=>#<BigDecimal:de94168,'0.23E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T17:52:44.481840 #21834]  INFO -- : [btccny] new trade - ask: 4/$2.0/1.0 bid: 1/$23.0/0.0 price: 23.0 volume: 2.0 funds: 46.0
+D, [2014-07-10T17:52:44.482121 #21834] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>3, :timestamp=>1404990792, :type=>:bid, :volume=>#<BigDecimal:d70841c,'0.3E1',9(18)>, :price=>#<BigDecimal:debef6c,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T17:52:44.482393 #21834]  INFO -- : [btccny] new trade - ask: 4/$2.0/0.0 bid: 3/$4.0/3.0 price: 4.0 volume: 1.0 funds: 4.0
+D, [2014-07-10T17:52:44.482772 #21834] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>5, :timestamp=>1404990996, :type=>:ask, :volume=>#<BigDecimal:debe378,'0.3E1',9(27)>, :price=>#<BigDecimal:debe418,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-10T17:52:44.483143 #21834] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>6, :timestamp=>1404992626, :type=>:ask, :volume=>#<BigDecimal:debde50,'0.1E2',9(27)>, :price=>#<BigDecimal:debdf40,'0.5E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-10T17:52:44.483563 #21834] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>6, :timestamp=>1404992626, :type=>:ask, :volume=>#<BigDecimal:dd0e9d8,'0.0',9(18)>, :price=>#<BigDecimal:debdf40,'0.5E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T17:52:44.483833 #21834]  INFO -- : [btccny] new trade - ask: 6/$5.0/0.0 bid: 7/$10.0/0.0 price: 5.0 volume: 10.0 funds: 50.0
+D, [2014-07-10T17:52:44.484209 #21834] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>5, :timestamp=>1404990996, :type=>:ask, :volume=>#<BigDecimal:dffe5d0,'0.1E1',9(18)>, :price=>#<BigDecimal:debe418,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T17:52:44.484513 #21834]  INFO -- : [btccny] new trade - ask: 5/$34.0/1.0 bid: 8/$2110.0/0.0 price: 34.0 volume: 2.0 funds: 68.0
+D, [2014-07-10T17:52:44.484922 #21834] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>9, :timestamp=>1404994085, :type=>:bid, :volume=>#<BigDecimal:debcd70,'0.2E1',9(27)>, :price=>#<BigDecimal:debcdac,'0.22E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T17:52:44.485155 #21834]  INFO -- : All engines reloaded.
+peatio:amqp:matching: process with pid 3002 started.
+I, [2014-07-10T18:09:22.153331 #3002]  INFO -- : Connected to AMQP broker (prefetch: default)
+D, [2014-07-10T18:09:22.492233 #3002] DEBUG -- : orderbook broadcast: {:action=>"new", :market=>"btccny", :side=>:ask}
+D, [2014-07-10T18:09:22.646096 #3002] DEBUG -- : orderbook broadcast: {:action=>"new", :market=>"btccny", :side=>:bid}
+D, [2014-07-10T18:09:27.656240 #3002] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>1, :timestamp=>1404990591, :type=>:bid, :volume=>#<BigDecimal:e5b1cc0,'0.2E1',9(27)>, :price=>#<BigDecimal:e5b1d38,'0.23E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-10T18:09:31.891362 #3002] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>2, :timestamp=>1404990767, :type=>:bid, :volume=>#<BigDecimal:e5b1900,'0.1E2',9(27)>, :price=>#<BigDecimal:e5b1978,'0.3E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-10T18:09:31.897216 #3002] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>3, :timestamp=>1404990792, :type=>:bid, :volume=>#<BigDecimal:e5b1540,'0.4E1',9(27)>, :price=>#<BigDecimal:e5b15b8,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-10T18:09:31.956858 #3002] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>1, :timestamp=>1404990591, :type=>:bid, :volume=>#<BigDecimal:e7b5cc4,'0.0',9(18)>, :price=>#<BigDecimal:e5b1d38,'0.23E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T18:09:31.957509 #3002]  INFO -- : [btccny] new trade - ask: 4/$2.0/1.0 bid: 1/$23.0/0.0 price: 23.0 volume: 2.0 funds: 46.0
+D, [2014-07-10T18:09:31.958006 #3002] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>3, :timestamp=>1404990792, :type=>:bid, :volume=>#<BigDecimal:e7bd99c,'0.3E1',9(18)>, :price=>#<BigDecimal:e5b15b8,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T18:09:31.958486 #3002]  INFO -- : [btccny] new trade - ask: 4/$2.0/0.0 bid: 3/$4.0/3.0 price: 4.0 volume: 1.0 funds: 4.0
+D, [2014-07-10T18:09:31.959167 #3002] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>5, :timestamp=>1404990996, :type=>:ask, :volume=>#<BigDecimal:e5b0cd0,'0.3E1',9(27)>, :price=>#<BigDecimal:e5b0d48,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-10T18:09:31.959807 #3002] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>6, :timestamp=>1404992626, :type=>:ask, :volume=>#<BigDecimal:e5b085c,'0.1E2',9(27)>, :price=>#<BigDecimal:e5b0938,'0.5E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-10T18:09:31.960504 #3002] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>6, :timestamp=>1404992626, :type=>:ask, :volume=>#<BigDecimal:e4a1434,'0.0',9(18)>, :price=>#<BigDecimal:e5b0938,'0.5E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T18:09:31.960969 #3002]  INFO -- : [btccny] new trade - ask: 6/$5.0/0.0 bid: 7/$10.0/0.0 price: 5.0 volume: 10.0 funds: 50.0
+D, [2014-07-10T18:09:31.961606 #3002] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>5, :timestamp=>1404990996, :type=>:ask, :volume=>#<BigDecimal:e4ae7d8,'0.1E1',9(18)>, :price=>#<BigDecimal:e5b0d48,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T18:09:31.962067 #3002]  INFO -- : [btccny] new trade - ask: 5/$34.0/1.0 bid: 8/$2110.0/0.0 price: 34.0 volume: 2.0 funds: 68.0
+D, [2014-07-10T18:09:31.962714 #3002] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>9, :timestamp=>1404994085, :type=>:bid, :volume=>#<BigDecimal:e5df9f4,'0.2E1',9(27)>, :price=>#<BigDecimal:e5dfa6c,'0.22E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T18:09:31.963116 #3002]  INFO -- : All engines reloaded.
+I, [2014-07-10T18:15:03.565216 #3002]  INFO -- : Received: {"action":"submit","order":{"id":10,"market":"btccny","type":"bid","ord_type":"limit","volume":"2.0","price":"6.0","locked":"12.0","timestamp":1404996303}}
+D, [2014-07-10T18:15:03.590524 #3002] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>10, :timestamp=>1404996303, :type=>:bid, :volume=>#<BigDecimal:e5ed1d0,'0.2E1',9(18)>, :price=>#<BigDecimal:e5ed194,'0.6E1',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T18:19:12.479829 #3002]  INFO -- : Received: {"action":"submit","order":{"id":11,"market":"btccny","type":"ask","ord_type":"limit","volume":"2.0","price":"30.0","locked":"2.0","timestamp":1404996552}}
+D, [2014-07-10T18:19:12.618109 #3002] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>11, :timestamp=>1404996552, :type=>:ask, :volume=>#<BigDecimal:e5fdbe8,'0.2E1',9(18)>, :price=>#<BigDecimal:e5fdbc0,'0.3E2',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T18:22:02.720982 #3002]  INFO -- : Received: {"action":"submit","order":{"id":12,"market":"btccny","type":"ask","ord_type":"limit","volume":"2.0","price":"8.0","locked":"2.0","timestamp":1404996722}}
+D, [2014-07-10T18:22:03.261845 #3002] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>9, :timestamp=>1404994085, :type=>:bid, :volume=>#<BigDecimal:e356f70,'0.0',9(18)>, :price=>#<BigDecimal:e5dfa6c,'0.22E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T18:22:03.518585 #3002]  INFO -- : [btccny] new trade - ask: 12/$8.0/0.0 bid: 9/$22.0/0.0 price: 22.0 volume: 2.0 funds: 44.0
+I, [2014-07-10T18:22:41.735907 #3002]  INFO -- : Received: {"action":"cancel","order":{"id":9,"market":"btccny","type":"bid","ord_type":"limit","volume":"0.0","price":"22.0","locked":"0.0","timestamp":1404994085}}
+W, [2014-07-10T18:22:41.807907 #3002]  WARN -- : Cannot find order#9 to cancel, skip.
+I, [2014-07-10T18:36:35.961861 #3002]  INFO -- : Received: {"action":"cancel","order":{"id":10,"market":"btccny","type":"bid","ord_type":"limit","volume":"2.0","price":"6.0","locked":"12.0","timestamp":1404996303}}
+D, [2014-07-10T18:36:36.036197 #3002] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>10, :timestamp=>1404996303, :type=>:bid, :volume=>#<BigDecimal:e5ed1d0,'0.2E1',9(18)>, :price=>#<BigDecimal:e5ed194,'0.6E1',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T18:36:36.101264 #3002]  INFO -- : [btccny] cancel order #10 - reason: cancelled by user
+I, [2014-07-10T18:36:36.299495 #3002]  INFO -- : Received: {"action":"cancel","order":{"id":5,"market":"btccny","type":"ask","ord_type":"limit","volume":"1.0","price":"34.0","locked":"1.0","timestamp":1404990996}}
+D, [2014-07-10T18:36:36.340704 #3002] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>5, :timestamp=>1404990996, :type=>:ask, :volume=>#<BigDecimal:e4ae7d8,'0.1E1',9(18)>, :price=>#<BigDecimal:e5b0d48,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T18:36:36.377735 #3002]  INFO -- : [btccny] cancel order #5 - reason: cancelled by user
+I, [2014-07-10T18:36:36.692835 #3002]  INFO -- : Received: {"action":"cancel","order":{"id":3,"market":"btccny","type":"bid","ord_type":"limit","volume":"3.0","price":"4.0","locked":"12.0","timestamp":1404990792}}
+D, [2014-07-10T18:36:37.370748 #3002] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>3, :timestamp=>1404990792, :type=>:bid, :volume=>#<BigDecimal:e7bd99c,'0.3E1',9(18)>, :price=>#<BigDecimal:e5b15b8,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T18:36:37.600914 #3002]  INFO -- : [btccny] cancel order #3 - reason: cancelled by user
+I, [2014-07-10T18:36:37.785443 #3002]  INFO -- : Received: {"action":"cancel","order":{"id":2,"market":"btccny","type":"bid","ord_type":"limit","volume":"10.0","price":"3.0","locked":"30.0","timestamp":1404990767}}
+D, [2014-07-10T18:36:37.973209 #3002] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>2, :timestamp=>1404990767, :type=>:bid, :volume=>#<BigDecimal:e5b1900,'0.1E2',9(27)>, :price=>#<BigDecimal:e5b1978,'0.3E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T18:36:38.013274 #3002]  INFO -- : [btccny] cancel order #2 - reason: cancelled by user
+I, [2014-07-10T19:12:32.358002 #3002]  INFO -- : Received: {"action":"submit","order":{"id":13,"market":"btccny","type":"bid","ord_type":"limit","volume":"2.5","price":"40.0","locked":"100.0","timestamp":1404999752}}
+D, [2014-07-10T19:12:32.817728 #3002] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>11, :timestamp=>1404996552, :type=>:ask, :volume=>#<BigDecimal:df7c094,'0.0',9(18)>, :price=>#<BigDecimal:e5fdbc0,'0.3E2',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T19:12:33.011071 #3002]  INFO -- : [btccny] new trade - ask: 11/$30.0/0.0 bid: 13/$40.0/0.5 price: 30.0 volume: 2.0 funds: 60.0
+D, [2014-07-10T19:12:33.131476 #3002] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>13, :timestamp=>1404999752, :type=>:bid, :volume=>#<BigDecimal:df8aff4,'0.5E0',9(27)>, :price=>#<BigDecimal:df7c42c,'0.4E2',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T19:12:52.892017 #3002]  INFO -- : Received: {"action":"submit","order":{"id":14,"market":"btccny","type":"bid","ord_type":"limit","volume":"10.0","price":"5.0","locked":"50.0","timestamp":1404999772}}
+D, [2014-07-10T19:12:52.956461 #3002] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>14, :timestamp=>1404999772, :type=>:bid, :volume=>#<BigDecimal:df9bf84,'0.1E2',9(18)>, :price=>#<BigDecimal:df9bf5c,'0.5E1',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T19:13:05.550617 #3002]  INFO -- : Received: {"action":"submit","order":{"id":15,"market":"btccny","type":"ask","ord_type":"limit","volume":"200.0","price":"4.0","locked":"200.0","timestamp":1404999785}}
+D, [2014-07-10T19:13:05.551150 #3002] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>13, :timestamp=>1404999752, :type=>:bid, :volume=>#<BigDecimal:df98fa0,'0.0',9(18)>, :price=>#<BigDecimal:df7c42c,'0.4E2',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T19:13:05.723850 #3002]  INFO -- : [btccny] new trade - ask: 15/$4.0/199.5 bid: 13/$40.0/0.0 price: 40.0 volume: 0.5 funds: 20.0
+D, [2014-07-10T19:13:05.868636 #3002] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>14, :timestamp=>1404999772, :type=>:bid, :volume=>#<BigDecimal:e1b6d64,'0.0',9(18)>, :price=>#<BigDecimal:df9bf5c,'0.5E1',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T19:13:06.074303 #3002]  INFO -- : [btccny] new trade - ask: 15/$4.0/189.5 bid: 14/$5.0/0.0 price: 5.0 volume: 10.0 funds: 50.0
+D, [2014-07-10T19:13:06.091643 #3002] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:e1b5ce8,'0.1895E3',18(27)>, :price=>#<BigDecimal:df990f4,'0.4E1',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-10T19:13:16.670776 #3002]  INFO -- : Received: {"action":"submit","order":{"id":16,"market":"btccny","type":"ask","ord_type":"limit","volume":"22.0","price":"6.0","locked":"22.0","timestamp":1404999796}}
+D, [2014-07-10T19:13:16.695906 #3002] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>16, :timestamp=>1404999796, :type=>:ask, :volume=>#<BigDecimal:e1be794,'0.22E2',9(18)>, :price=>#<BigDecimal:e1be76c,'0.6E1',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+W, [2014-07-10T20:48:44.821268 #3002]  WARN -- #<Bunny::Session:118324810 guest@127.0.0.1:5672, vhost=/>: Recovering from a network failure...
+W, [2014-07-10T20:48:45.885736 #3002]  WARN -- #<Bunny::Session:118617580 guest@127.0.0.1:5672, vhost=/>: Recovering from a network failure...
+Terminating threads ..
+Stopped.
+peatio:amqp:matching: process with pid 25232 started.
+I, [2014-07-14T17:39:51.917260 #25232]  INFO -- : Connected to AMQP broker (prefetch: default)
+D, [2014-07-14T17:39:52.251248 #25232] DEBUG -- : orderbook broadcast: {:action=>"new", :market=>"btccny", :side=>:ask}
+D, [2014-07-14T17:39:52.381390 #25232] DEBUG -- : orderbook broadcast: {:action=>"new", :market=>"btccny", :side=>:bid}
+D, [2014-07-14T17:39:58.126434 #25232] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:996ace0,'0.1895E3',18(36)>, :price=>#<BigDecimal:996ae48,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T17:39:58.127350 #25232] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>16, :timestamp=>1404999796, :type=>:ask, :volume=>#<BigDecimal:996a4c0,'0.22E2',9(27)>, :price=>#<BigDecimal:996a54c,'0.6E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T17:39:58.128124 #25232] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>17, :timestamp=>1405062276, :type=>:bid, :volume=>#<BigDecimal:9969fac,'0.1E1',9(27)>, :price=>#<BigDecimal:996a0c4,'0.1E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T17:39:58.357422 #25232] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:b84cff0,'0.1875E3',18(27)>, :price=>#<BigDecimal:996ae48,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:39:58.358219 #25232]  INFO -- : [btccny] new trade - ask: 15/$4.0/187.5 bid: 18/$32.0/0.0 price: 4.0 volume: 2.0 funds: 8.0
+D, [2014-07-14T17:39:58.358905 #25232] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:b860e60,'0.1555E3',18(27)>, :price=>#<BigDecimal:996ae48,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:39:58.359234 #25232]  INFO -- : [btccny] new trade - ask: 15/$4.0/155.5 bid: 19/$232.0/0.0 price: 4.0 volume: 32.0 funds: 128.0
+D, [2014-07-14T17:39:58.359669 #25232] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:b877390,'0.1335E3',18(27)>, :price=>#<BigDecimal:996ae48,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:39:58.359961 #25232]  INFO -- : [btccny] new trade - ask: 15/$4.0/133.5 bid: 20/$23.0/0.0 price: 4.0 volume: 22.0 funds: 88.0
+D, [2014-07-14T17:39:58.360870 #25232] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:b881124,'0.1295E3',18(27)>, :price=>#<BigDecimal:996ae48,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:39:58.361224 #25232]  INFO -- : [btccny] new trade - ask: 15/$4.0/129.5 bid: 21/$4.0/0.0 price: 4.0 volume: 4.0 funds: 16.0
+D, [2014-07-14T17:39:58.361797 #25232] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:b8881b8,'0.865E2',18(27)>, :price=>#<BigDecimal:996ae48,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:39:58.362128 #25232]  INFO -- : [btccny] new trade - ask: 15/$4.0/86.5 bid: 22/$32.0/0.0 price: 4.0 volume: 43.0 funds: 172.0
+D, [2014-07-14T17:39:58.362613 #25232] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:b89b010,'0.0',9(27)>, :price=>#<BigDecimal:996ae48,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:39:58.362947 #25232]  INFO -- : [btccny] new trade - ask: 15/$4.0/0.0 bid: 23/$34.0/347.5 price: 4.0 volume: 86.5 funds: 346.0
+D, [2014-07-14T17:39:58.363305 #25232] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>16, :timestamp=>1404999796, :type=>:ask, :volume=>#<BigDecimal:b8d0364,'0.0',9(18)>, :price=>#<BigDecimal:996a54c,'0.6E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:39:58.363612 #25232]  INFO -- : [btccny] new trade - ask: 16/$6.0/0.0 bid: 23/$34.0/325.5 price: 6.0 volume: 22.0 funds: 132.0
+D, [2014-07-14T17:39:58.363962 #25232] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:b8d5abc,'0.3255E3',18(27)>, :price=>#<BigDecimal:996ef34,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T17:39:58.364411 #25232] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>24, :timestamp=>1405335484, :type=>:bid, :volume=>#<BigDecimal:996e3f4,'0.434E3',9(36)>, :price=>#<BigDecimal:996e548,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T17:39:58.364855 #25232] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>25, :timestamp=>1405335871, :type=>:ask, :volume=>#<BigDecimal:996cedc,'0.43E2',9(27)>, :price=>#<BigDecimal:996d274,'0.43E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T17:39:58.365311 #25232] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>25, :timestamp=>1405335871, :type=>:ask, :volume=>#<BigDecimal:b90d778,'0.38E2',9(18)>, :price=>#<BigDecimal:996d274,'0.43E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:39:58.365649 #25232]  INFO -- : [btccny] new trade - ask: 25/$43.0/38.0 bid: 26/$54.0/0.0 price: 43.0 volume: 5.0 funds: 215.0
+D, [2014-07-14T17:39:58.366140 #25232] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>27, :timestamp=>1405336340, :type=>:bid, :volume=>#<BigDecimal:996c1e4,'0.43E2',9(27)>, :price=>#<BigDecimal:996c234,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T17:39:58.366600 #25232] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:b934bc0,'0.2935E3',18(27)>, :price=>#<BigDecimal:996ef34,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:39:58.366920 #25232]  INFO -- : [btccny] new trade - ask: 28/$32.0/0.0 bid: 23/$34.0/293.5 price: 34.0 volume: 32.0 funds: 1088.0
+D, [2014-07-14T17:39:58.367388 #25232] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:b963a60,'0.2915E3',18(27)>, :price=>#<BigDecimal:996ef34,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:39:58.367690 #25232]  INFO -- : [btccny] new trade - ask: 29/$2.0/0.0 bid: 23/$34.0/291.5 price: 34.0 volume: 2.0 funds: 68.0
+D, [2014-07-14T17:39:58.368166 #25232] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:b979630,'0.2375E3',18(27)>, :price=>#<BigDecimal:996ef34,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:39:58.368478 #25232]  INFO -- : [btccny] new trade - ask: 30/$3.0/0.0 bid: 23/$34.0/237.5 price: 34.0 volume: 54.0 funds: 1836.0
+D, [2014-07-14T17:39:58.368974 #25232] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>31, :timestamp=>1405336993, :type=>:bid, :volume=>#<BigDecimal:99ca5b4,'0.32E2',9(27)>, :price=>#<BigDecimal:99ca6cc,'0.2E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T17:39:58.369390 #25232] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>32, :timestamp=>1405337140, :type=>:bid, :volume=>#<BigDecimal:99c9768,'0.3E1',9(27)>, :price=>#<BigDecimal:99c97e0,'0.3E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T17:39:58.369835 #25232] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:b9ad598,'0.2055E3',18(27)>, :price=>#<BigDecimal:996ef34,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:39:58.370152 #25232]  INFO -- : [btccny] new trade - ask: 33/$21.0/0.0 bid: 23/$34.0/205.5 price: 34.0 volume: 32.0 funds: 1088.0
+I, [2014-07-14T17:39:58.370489 #25232]  INFO -- : All engines reloaded.
+I, [2014-07-14T17:49:17.878532 #25232]  INFO -- : Received: {"action":"submit","order":{"id":34,"market":"btccny","type":"bid","ord_type":"limit","volume":"2.0","price":"2.0","locked":"4.0","timestamp":1405340357}}
+D, [2014-07-14T17:49:17.952187 #25232] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>34, :timestamp=>1405340357, :type=>:bid, :volume=>#<BigDecimal:ba10df0,'0.2E1',9(18)>, :price=>#<BigDecimal:ba10cb0,'0.2E1',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:50:42.107611 #25232]  INFO -- : Received: {"action":"submit","order":{"id":35,"market":"btccny","type":"bid","ord_type":"limit","volume":"3.0","price":"2.0","locked":"6.0","timestamp":1405340441}}
+D, [2014-07-14T17:50:42.108208 #25232] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>35, :timestamp=>1405340441, :type=>:bid, :volume=>#<BigDecimal:ba54050,'0.3E1',9(18)>, :price=>#<BigDecimal:ba63f78,'0.2E1',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:50:47.770721 #25232]  INFO -- : Received: {"action":"submit","order":{"id":36,"market":"btccny","type":"ask","ord_type":"limit","volume":"32.0","price":"2.0","locked":"32.0","timestamp":1405340447}}
+D, [2014-07-14T17:50:47.771358 #25232] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:ba8afb0,'0.1735E3',18(27)>, :price=>#<BigDecimal:996ef34,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T17:50:47.771992 #25232]  INFO -- : [btccny] new trade - ask: 36/$2.0/0.0 bid: 23/$34.0/173.5 price: 34.0 volume: 32.0 funds: 1088.0
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `join': Connection-level error: CONNECTION_FORCED - broker forced connection closure with reason 'shutdown' (Bunny::ConnectionForced)
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `block in join'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `each'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `join'
+	from /home/yuva/Desktop/arvind/peatio/peatio-master/lib/daemons/amqp_daemon.rb:80:in `<top (required)>'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `load'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `start_load'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:298:in `start'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/controller.rb:70:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons.rb:147:in `block in run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `call'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `catch_exceptions'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons.rb:146:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-rails-1.2.1/lib/daemons/rails.rb:16:in `run'
+	from lib/daemons/matching_ctl:11:in `<main>'
+peatio:amqp:matching: process with pid 32061 started.
+I, [2014-07-14T18:11:27.806295 #32061]  INFO -- : Connected to AMQP broker (prefetch: default)
+D, [2014-07-14T18:11:27.806924 #32061] DEBUG -- : orderbook broadcast: {:action=>"new", :market=>"btccny", :side=>:ask}
+D, [2014-07-14T18:11:27.813062 #32061] DEBUG -- : orderbook broadcast: {:action=>"new", :market=>"btccny", :side=>:bid}
+D, [2014-07-14T18:11:28.153579 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:ddc9e68,'0.1895E3',18(36)>, :price=>#<BigDecimal:ddc9ea4,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T18:11:28.154106 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>16, :timestamp=>1404999796, :type=>:ask, :volume=>#<BigDecimal:ddc9c24,'0.22E2',9(27)>, :price=>#<BigDecimal:ddc9c60,'0.6E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T18:11:28.154520 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>17, :timestamp=>1405062276, :type=>:bid, :volume=>#<BigDecimal:ddc9850,'0.1E1',9(27)>, :price=>#<BigDecimal:ddc98c8,'0.1E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T18:11:28.154904 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:d4261a4,'0.1875E3',18(27)>, :price=>#<BigDecimal:ddc9ea4,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:11:28.155183 #32061]  INFO -- : [btccny] new trade - ask: 15/$4.0/187.5 bid: 18/$32.0/0.0 price: 4.0 volume: 2.0 funds: 8.0
+D, [2014-07-14T18:11:28.155552 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:d5efbe8,'0.1555E3',18(27)>, :price=>#<BigDecimal:ddc9ea4,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:11:28.155814 #32061]  INFO -- : [btccny] new trade - ask: 15/$4.0/155.5 bid: 19/$232.0/0.0 price: 4.0 volume: 32.0 funds: 128.0
+D, [2014-07-14T18:11:28.156173 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:d5ed668,'0.1335E3',18(27)>, :price=>#<BigDecimal:ddc9ea4,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:11:28.156432 #32061]  INFO -- : [btccny] new trade - ask: 15/$4.0/133.5 bid: 20/$23.0/0.0 price: 4.0 volume: 22.0 funds: 88.0
+D, [2014-07-14T18:11:28.156791 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:d5f6f10,'0.1295E3',18(27)>, :price=>#<BigDecimal:ddc9ea4,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:11:28.157053 #32061]  INFO -- : [btccny] new trade - ask: 15/$4.0/129.5 bid: 21/$4.0/0.0 price: 4.0 volume: 4.0 funds: 16.0
+D, [2014-07-14T18:11:28.157413 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:da2a898,'0.865E2',18(27)>, :price=>#<BigDecimal:ddc9ea4,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:11:28.157685 #32061]  INFO -- : [btccny] new trade - ask: 15/$4.0/86.5 bid: 22/$32.0/0.0 price: 4.0 volume: 43.0 funds: 172.0
+D, [2014-07-14T18:11:28.158064 #32061] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>15, :timestamp=>1404999785, :type=>:ask, :volume=>#<BigDecimal:da2de58,'0.0',9(27)>, :price=>#<BigDecimal:ddc9ea4,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:11:28.158330 #32061]  INFO -- : [btccny] new trade - ask: 15/$4.0/0.0 bid: 23/$34.0/347.5 price: 4.0 volume: 86.5 funds: 346.0
+D, [2014-07-14T18:11:28.158601 #32061] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>16, :timestamp=>1404999796, :type=>:ask, :volume=>#<BigDecimal:da39a50,'0.0',9(18)>, :price=>#<BigDecimal:ddc9c60,'0.6E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:11:28.158860 #32061]  INFO -- : [btccny] new trade - ask: 16/$6.0/0.0 bid: 23/$34.0/325.5 price: 6.0 volume: 22.0 funds: 132.0
+D, [2014-07-14T18:11:28.159117 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:da4795c,'0.3255E3',18(27)>, :price=>#<BigDecimal:ddfbecc,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T18:11:28.159476 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>24, :timestamp=>1405335484, :type=>:bid, :volume=>#<BigDecimal:ddfb800,'0.434E3',9(36)>, :price=>#<BigDecimal:ddfb878,'0.4E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T18:11:28.159881 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>25, :timestamp=>1405335871, :type=>:ask, :volume=>#<BigDecimal:ddfb210,'0.43E2',9(27)>, :price=>#<BigDecimal:ddfb2b0,'0.43E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T18:11:28.160247 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>25, :timestamp=>1405335871, :type=>:ask, :volume=>#<BigDecimal:dcbe35c,'0.38E2',9(18)>, :price=>#<BigDecimal:ddfb2b0,'0.43E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:11:28.160507 #32061]  INFO -- : [btccny] new trade - ask: 25/$43.0/38.0 bid: 26/$54.0/0.0 price: 43.0 volume: 5.0 funds: 215.0
+D, [2014-07-14T18:11:28.160859 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>27, :timestamp=>1405336340, :type=>:bid, :volume=>#<BigDecimal:ddfa810,'0.43E2',9(27)>, :price=>#<BigDecimal:ddfa888,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T18:11:28.161226 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:dccf0bc,'0.2935E3',18(27)>, :price=>#<BigDecimal:ddfbecc,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:11:28.161482 #32061]  INFO -- : [btccny] new trade - ask: 28/$32.0/0.0 bid: 23/$34.0/293.5 price: 34.0 volume: 32.0 funds: 1088.0
+D, [2014-07-14T18:11:28.161845 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:ca8e678,'0.2915E3',18(27)>, :price=>#<BigDecimal:ddfbecc,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:11:28.162104 #32061]  INFO -- : [btccny] new trade - ask: 29/$2.0/0.0 bid: 23/$34.0/291.5 price: 34.0 volume: 2.0 funds: 68.0
+D, [2014-07-14T18:11:28.162458 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:ca91c10,'0.2375E3',18(27)>, :price=>#<BigDecimal:ddfbecc,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:11:28.162715 #32061]  INFO -- : [btccny] new trade - ask: 30/$3.0/0.0 bid: 23/$34.0/237.5 price: 34.0 volume: 54.0 funds: 1836.0
+D, [2014-07-14T18:11:28.163067 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>31, :timestamp=>1405336993, :type=>:bid, :volume=>#<BigDecimal:ddf9528,'0.32E2',9(27)>, :price=>#<BigDecimal:ddf95c8,'0.2E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T18:11:28.163421 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>32, :timestamp=>1405337140, :type=>:bid, :volume=>#<BigDecimal:ddf8f38,'0.3E1',9(27)>, :price=>#<BigDecimal:ddf8fb0,'0.3E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T18:11:28.163790 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:caab304,'0.2055E3',18(27)>, :price=>#<BigDecimal:ddfbecc,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:11:28.164048 #32061]  INFO -- : [btccny] new trade - ask: 33/$21.0/0.0 bid: 23/$34.0/205.5 price: 34.0 volume: 32.0 funds: 1088.0
+D, [2014-07-14T18:11:28.164399 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>34, :timestamp=>1405340357, :type=>:bid, :volume=>#<BigDecimal:ddf83f8,'0.2E1',9(27)>, :price=>#<BigDecimal:ddf8498,'0.2E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T18:11:28.164767 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>35, :timestamp=>1405340441, :type=>:bid, :volume=>#<BigDecimal:ddf8038,'0.3E1',9(27)>, :price=>#<BigDecimal:ddf80b0,'0.2E1',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+D, [2014-07-14T18:11:28.165135 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:cab5304,'0.1735E3',18(27)>, :price=>#<BigDecimal:ddfbecc,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:11:28.165399 #32061]  INFO -- : [btccny] new trade - ask: 36/$2.0/0.0 bid: 23/$34.0/173.5 price: 34.0 volume: 32.0 funds: 1088.0
+D, [2014-07-14T18:11:28.165769 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:e2d6a50,'0.1415E3',18(27)>, :price=>#<BigDecimal:ddfbecc,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:11:28.166026 #32061]  INFO -- : [btccny] new trade - ask: 37/$3.0/0.0 bid: 23/$34.0/141.5 price: 34.0 volume: 32.0 funds: 1088.0
+I, [2014-07-14T18:11:28.166245 #32061]  INFO -- : All engines reloaded.
+I, [2014-07-14T18:20:47.270570 #32061]  INFO -- : Received: {"action":"submit","order":{"id":38,"market":"btccny","type":"bid","ord_type":"limit","volume":"4.0","price":"43.0","locked":"172.0","timestamp":1405342245}}
+D, [2014-07-14T18:20:48.844859 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>25, :timestamp=>1405335871, :type=>:ask, :volume=>#<BigDecimal:e2f3420,'0.34E2',9(18)>, :price=>#<BigDecimal:ddfb2b0,'0.43E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:20:49.435671 #32061]  INFO -- : [btccny] new trade - ask: 25/$43.0/34.0 bid: 38/$43.0/0.0 price: 43.0 volume: 4.0 funds: 172.0
+I, [2014-07-14T18:21:06.594704 #32061]  INFO -- : Received: {"action":"submit","order":{"id":39,"market":"btccny","type":"ask","ord_type":"limit","volume":"65.0","price":"76.0","locked":"65.0","timestamp":1405342266}}
+D, [2014-07-14T18:21:06.627520 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>39, :timestamp=>1405342266, :type=>:ask, :volume=>#<BigDecimal:e2ff644,'0.65E2',9(18)>, :price=>#<BigDecimal:e2ff61c,'0.76E2',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:21:42.421678 #32061]  INFO -- : Received: {"action":"submit","order":{"id":40,"market":"btccny","type":"ask","ord_type":"limit","volume":"4.0","price":"5.0","locked":"4.0","timestamp":1405342302}}
+D, [2014-07-14T18:21:42.422106 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:e30fcb0,'0.1375E3',18(27)>, :price=>#<BigDecimal:ddfbecc,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:21:42.492432 #32061]  INFO -- : [btccny] new trade - ask: 40/$5.0/0.0 bid: 23/$34.0/137.5 price: 34.0 volume: 4.0 funds: 136.0
+I, [2014-07-14T18:22:03.988328 #32061]  INFO -- : Received: {"action":"submit","order":{"id":41,"market":"btccny","type":"bid","ord_type":"limit","volume":"3.0","price":"3.0","locked":"9.0","timestamp":1405342323}}
+D, [2014-07-14T18:22:04.040275 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>41, :timestamp=>1405342323, :type=>:bid, :volume=>#<BigDecimal:e30c088,'0.3E1',9(18)>, :price=>#<BigDecimal:e30c060,'0.3E1',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:22:19.011008 #32061]  INFO -- : Received: {"action":"submit","order":{"id":42,"market":"btccny","type":"ask","ord_type":"limit","volume":"6.0","price":"65.0","locked":"6.0","timestamp":1405342338}}
+D, [2014-07-14T18:22:19.011409 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>42, :timestamp=>1405342338, :type=>:ask, :volume=>#<BigDecimal:e319904,'0.6E1',9(18)>, :price=>#<BigDecimal:e3198dc,'0.65E2',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:23:45.194967 #32061]  INFO -- : Received: {"action":"submit","order":{"id":43,"market":"btccny","type":"bid","ord_type":"limit","volume":"2.0","price":"1.0","locked":"2.0","timestamp":1405342424}}
+D, [2014-07-14T18:23:45.195409 #32061] DEBUG -- : orderbook broadcast: {:action=>"add", :order=>{:id=>43, :timestamp=>1405342424, :type=>:bid, :volume=>#<BigDecimal:e327130,'0.2E1',9(18)>, :price=>#<BigDecimal:e327108,'0.1E1',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:23:58.024633 #32061]  INFO -- : Received: {"action":"submit","order":{"id":44,"market":"btccny","type":"ask","ord_type":"limit","volume":"54.0","price":"4.0","locked":"54.0","timestamp":1405342437}}
+D, [2014-07-14T18:23:58.148472 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:e32487c,'0.835E2',18(27)>, :price=>#<BigDecimal:ddfbecc,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:23:58.333669 #32061]  INFO -- : [btccny] new trade - ask: 44/$4.0/0.0 bid: 23/$34.0/83.5 price: 34.0 volume: 54.0 funds: 1836.0
+I, [2014-07-14T18:24:43.963118 #32061]  INFO -- : Received: {"action":"submit","order":{"id":45,"market":"btccny","type":"ask","ord_type":"limit","volume":"12.0","price":"3.0","locked":"12.0","timestamp":1405342483}}
+D, [2014-07-14T18:24:43.963407 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:e331680,'0.715E2',18(27)>, :price=>#<BigDecimal:ddfbecc,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:24:44.188719 #32061]  INFO -- : [btccny] new trade - ask: 45/$3.0/0.0 bid: 23/$34.0/71.5 price: 34.0 volume: 12.0 funds: 408.0
+I, [2014-07-14T18:28:03.788749 #32061]  INFO -- : Received: {"action":"submit","order":{"id":14,"market":"btccny","type":"ask","ord_type":"limit","volume":"21.0","price":"2.0","locked":"21.0","timestamp":1405342682}}
+D, [2014-07-14T18:28:04.012333 #32061] DEBUG -- : orderbook broadcast: {:action=>"update", :order=>{:id=>23, :timestamp=>1405335402, :type=>:bid, :volume=>#<BigDecimal:e33d6ec,'0.505E2',18(27)>, :price=>#<BigDecimal:ddfbecc,'0.34E2',9(27)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:28:04.857189 #32061]  INFO -- : [btccny] new trade - ask: 14/$2.0/0.0 bid: 23/$34.0/50.5 price: 34.0 volume: 21.0 funds: 714.0
+I, [2014-07-14T18:46:34.000171 #32061]  INFO -- : Received: {"action":"cancel","order":{"id":39,"market":"btccny","type":"ask","ord_type":"limit","volume":"65.0","price":"76.0","locked":"65.0","timestamp":1405342266}}
+D, [2014-07-14T18:46:34.614172 #32061] DEBUG -- : orderbook broadcast: {:action=>"remove", :order=>{:id=>39, :timestamp=>1405342266, :type=>:ask, :volume=>#<BigDecimal:e2ff644,'0.65E2',9(18)>, :price=>#<BigDecimal:e2ff61c,'0.76E2',9(18)>, :market=>"btccny", :ord_type=>"limit"}}
+I, [2014-07-14T18:46:34.681260 #32061]  INFO -- : [btccny] cancel order #39 - reason: cancelled by user

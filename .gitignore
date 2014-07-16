@@ -6,31 +6,3 @@
 
 # Ignore bundler config
 /.bundle
-
-/public/assets
-
-# Ignore the default SQLite database.
-/db/*.sqlite3
-
-# Ignore all logfiles and tempfiles.
-log
-tmp
-
-
-
-# Ignore translations.js
-/public/javascripts/translations.js
-
-# Ignore ctags
-.tags
-tags
-
-# Ignore vim temporary files
-**/*.swp
-
-# Ignore RubyMine files
-.idea
-
-/vendor/bundle
-.env
-.ruby-version

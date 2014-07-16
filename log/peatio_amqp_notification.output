@@ -1,0 +1,68 @@
+peatio:amqp:notification: process with pid 16828 started.
+/home/yuva/.rvm/gems/ruby-2.1.1/gems/amq-protocol-1.9.2/lib/amq/protocol/frame.rb:64:in `decode_header': Must be one of [:method, :headers, :body, :heartbeat] (AMQ::Protocol::FrameTypeError)
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/bunny-1.2.1/lib/bunny/transport.rb:208:in `read_next_frame'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/bunny-1.2.1/lib/bunny/session.rb:923:in `init_connection'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/bunny-1.2.1/lib/bunny/session.rb:254:in `start'
+	from /home/yuva/Desktop/arvind/peatio/peatio-master/lib/daemons/amqp_daemon.rb:17:in `<top (required)>'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `load'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `start_load'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/application.rb:298:in `start'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/controller.rb:70:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons.rb:147:in `block in run'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `call'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `catch_exceptions'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-1.1.9/lib/daemons.rb:146:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.1/gems/daemons-rails-1.2.1/lib/daemons/rails.rb:16:in `run'
+	from lib/daemons/notification_ctl:11:in `<main>'
+peatio:amqp:notification: process with pid 22192 started.
+peatio:amqp:notification: process with pid 3272 started.
+I, [2014-07-10T18:10:29.285884 #3272]  INFO -- : Connected to AMQP broker (prefetch: default)
+I, [2014-07-10T19:11:40.851668 #3272]  INFO -- : Received: {"mailer_class":"TokenMailer","method":"activation","args":["arvindyuvasoft112@mailinator.com","644a15848130c01e536b79653de140af"]}
+peatio:amqp:notification: process with pid 25294 started.
+I, [2014-07-14T17:39:51.916893 #25294]  INFO -- : Connected to AMQP broker (prefetch: default)
+I, [2014-07-14T17:45:36.488728 #25294]  INFO -- : Received: {"phone":"+91 98 06 877598","message":"Your phone number verification code is: 773872"}
+F, [2014-07-14T17:45:39.236256 #25294] FATAL -- : Authenticate (Twilio::REST::RequestError)
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/twilio-ruby-3.11.5/lib/twilio-ruby/rest/client.rb:229:in `connect_and_send'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/twilio-ruby-3.11.5/lib/twilio-ruby/rest/client.rb:168:in `block (2 levels) in <class:Client>'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/twilio-ruby-3.11.5/lib/twilio-ruby/rest/list_resource.rb:91:in `create'
+/home/yuva/Desktop/arvind/peatio/peatio-master/app/models/worker/sms_notification.rb:7:in `process'
+/home/yuva/Desktop/arvind/peatio/peatio-master/lib/daemons/amqp_daemon.rb:61:in `block (2 levels) in <top (required)>'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer.rb:56:in `call'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer.rb:56:in `call'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/channel.rb:1672:in `block in handle_frameset'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:84:in `call'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:84:in `block (2 levels) in run_loop'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:80:in `loop'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:80:in `block in run_loop'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:79:in `catch'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:79:in `run_loop'
+F, [2014-07-14T17:45:39.236419 #25294] FATAL -- : /home/yuva/.rvm/gems/ruby-2.1.2/gems/twilio-ruby-3.11.5/lib/twilio-ruby/rest/client.rb:229:in `connect_and_send'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/twilio-ruby-3.11.5/lib/twilio-ruby/rest/client.rb:168:in `block (2 levels) in <class:Client>'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/twilio-ruby-3.11.5/lib/twilio-ruby/rest/list_resource.rb:91:in `create'
+/home/yuva/Desktop/arvind/peatio/peatio-master/app/models/worker/sms_notification.rb:7:in `process'
+/home/yuva/Desktop/arvind/peatio/peatio-master/lib/daemons/amqp_daemon.rb:61:in `block (2 levels) in <top (required)>'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer.rb:56:in `call'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer.rb:56:in `call'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/channel.rb:1672:in `block in handle_frameset'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:84:in `call'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:84:in `block (2 levels) in run_loop'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:80:in `loop'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:80:in `block in run_loop'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:79:in `catch'
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:79:in `run_loop'
+I, [2014-07-14T17:48:50.041396 #25294]  INFO -- : Received: {"mailer_class":"MemberMailer","method":"notify_signin","args":[1]}
+/home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `join': Connection-level error: CONNECTION_FORCED - broker forced connection closure with reason 'shutdown' (Bunny::ConnectionForced)
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `block in join'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `each'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/bunny-1.2.1/lib/bunny/consumer_work_pool.rb:55:in `join'
+	from /home/yuva/Desktop/arvind/peatio/peatio-master/lib/daemons/amqp_daemon.rb:80:in `<top (required)>'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `load'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:203:in `start_load'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/application.rb:298:in `start'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/controller.rb:70:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons.rb:147:in `block in run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `call'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons/cmdline.rb:109:in `catch_exceptions'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-1.1.9/lib/daemons.rb:146:in `run'
+	from /home/yuva/.rvm/gems/ruby-2.1.2/gems/daemons-rails-1.2.1/lib/daemons/rails.rb:16:in `run'
+	from lib/daemons/notification_ctl:11:in `<main>'
