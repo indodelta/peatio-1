@@ -10,6 +10,7 @@
   require 'capistrano/rails/migrations'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
+Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
 #require "bundler/capistrano"
 lock '3.2.1'
 
@@ -31,10 +32,12 @@ set :format, :pretty
 
 # Default value for :log_level is :debug
 set :log_level, :debug
+
 # Default value for :pty is false
 #set :pty, true
 set :ssh_options, {:forward_agent => true}
 set :default_run_options, {:pty => true}
+set :rvm1_ruby_version, "ruby 2.1.2"
 set :user, "deploy"
 role :web, "104.131.224.194"
 role :app, "104.131.224.194"
