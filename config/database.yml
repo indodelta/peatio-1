@@ -5,7 +5,8 @@ development: &defaults
   password:
   pool: 10
   reconnect: true
-  socket: /opt/lampp/var/mysql/mysql.sock 
+  socket: /var/lib/mysql/mysql.sock
+  host: 127.0.0.1
 
 test:
   <<: *defaults
