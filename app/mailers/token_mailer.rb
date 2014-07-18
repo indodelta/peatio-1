@@ -1,7 +1,8 @@
 class TokenMailer < ActionMailer::Base
-  include AMQPQueue::Mailer
+  #include AMQPQueue::Mailer
 
-  default from: ENV['SYSTEM_MAIL_FROM']
+  #default from: ENV['SYSTEM_MAIL_FROM']
+   default from: 'example@peatio.com'
 
   def reset_password(email, token)
     @token_url = edit_reset_password_url(token)

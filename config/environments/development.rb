@@ -18,11 +18,11 @@ Peatio::Application.configure do
   config.cache_store = :redis_store, { expires_in: 24.hours }
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.delivery_method = :file
   config.action_mailer.file_settings = { location: 'tmp/mails' }
-
+  config.action_mailer.perform_deliveries = true
   #config.action_mailer.default_url_options = { :host => ENV["URL_HOST"] }
 
   # Print deprecation notices to the Rails logger.
@@ -34,20 +34,7 @@ Peatio::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-
-  # config.action_mailer.default_url_options = { :host => ENV["URL_HOST"] }
-
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #   :port                 => ENV["SMTP_PORT"],
-  #   :domain               => ENV["SMTP_DOMAIN"],
-  #   :address              => ENV["SMTP_ADDRESS"],
-  #   :user_name            => ENV["SMTP_USERNAME"],
-  #   :password             => ENV["SMTP_PASSWORD"],
-  #   :authentication       => 'plain',
-  #   :enable_starttls_auto => true
-  # }
-  config.assets.debug = true
+    config.assets.debug = true
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
@@ -58,6 +45,5 @@ Peatio::Application.configure do
       authentication:       'plain',
       enable_starttls_auto: true  }
 
-  config.action_controller.perform_caching = true
   config.active_record.default_timezone = :local
 end

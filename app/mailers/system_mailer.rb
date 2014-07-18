@@ -1,7 +1,8 @@
 class SystemMailer < ActionMailer::Base
-  include AMQPQueue::Mailer
+  #include AMQPQueue::Mailer
 
-  default from: ENV["SYSTEM_MAIL_FROM"], to: ENV["SYSTEM_MAIL_TO"]
+  #default from: ENV["SYSTEM_MAIL_FROM"], to: ENV["SYSTEM_MAIL_TO"]
+  default from: 'example@peatio.com', to: 'example@peatio.com'
 
   def balance_warning(amount, balance)
     @amount = amount

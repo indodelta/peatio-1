@@ -1,5 +1,0 @@
-peatio:amqp:trade_executor:4: process with pid 21925 started.
-I, [2014-07-10T17:54:05.751078 #21925]  INFO -- : Connected to AMQP broker (prefetch: 5)
-peatio:amqp:trade_executor:4: process with pid 32351 started.
-I, [2014-07-14T18:13:43.689481 #32351]  INFO -- : Connected to AMQP broker (prefetch: 5)
-I, [2014-07-14T18:21:42.644848 #32351]  INFO -- : Received: {"market_id":"btccny","ask_id":40,"bid_id":23,"strike_price":"34.0","volume":"4.0","funds":"136.0"}
