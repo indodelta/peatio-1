@@ -14,7 +14,8 @@ ul#menu.nav.navbar-nav.navbar-left
         a href="/markets/dogcny"  BTC/DRK
       li.divider
       li
-        a href="/markets/dogbtc"  DOG/BTC        
+        a href="/markets/dogbtc"  DOG/BTC 
+  = top_nav_link(t('header.credits'), credits_new_path,'credit-card', controllers: ['credits'])       
   = top_nav_link(t('header.deposit'), deposits_path, 'credit-card', controllers: ['deposits'])
   = top_nav_link(t('header.withdraw'), withdraws_path, 'money', controllers: ['withdraws'])
   = top_nav_link(t('header.assets'), exchange_assets_path, 'bar-chart-o')

@@ -23,6 +23,9 @@ en:
         destroy:
           title: Disable Two-Factor Authentication
           intro: If you have a new phone, you can disable Two-Factor Authentication in the old phone, and enable Two-Factor Authentication  with the new one.
+      credits:
+        panel: Credit
+        intro: You can Credit the CNY to buy bitcoins, or recharge Bitcoin to exchange CNY.
 
       deposits:
         panel: Deposit

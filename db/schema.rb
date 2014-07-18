@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140703070953) do
+ActiveRecord::Schema.define(version: 20140718090409) do
 
   create_table "account_versions", force: true do |t|
     t.integer  "member_id"
@@ -70,6 +70,14 @@ ActiveRecord::Schema.define(version: 20140703070953) do
 
   add_index "authentications", ["member_id"], name: "index_authentications_on_member_id", using: :btree
   add_index "authentications", ["provider", "uid"], name: "index_authentications_on_provider_and_uid", using: :btree
+
+  create_table "credits", force: true do |t|
+    t.decimal  "amount",     precision: 10, scale: 0
+    t.string   "currency"
+    t.integer  "member_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "deposits", force: true do |t|
     t.integer  "account_id"

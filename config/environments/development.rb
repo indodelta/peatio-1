@@ -34,14 +34,27 @@ Peatio::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
+
+  # config.action_mailer.default_url_options = { :host => ENV["URL_HOST"] }
+
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   :port                 => ENV["SMTP_PORT"],
+  #   :domain               => ENV["SMTP_DOMAIN"],
+  #   :address              => ENV["SMTP_ADDRESS"],
+  #   :user_name            => ENV["SMTP_USERNAME"],
+  #   :password             => ENV["SMTP_PASSWORD"],
+  #   :authentication       => 'plain',
+  #   :enable_starttls_auto => true
+  # }
   config.assets.debug = true
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
       address:              'smtp.gmail.com',
       port:                 587,
-      user_name:            'arvindyuvasoft112@gmail.com',
-      password:             '9981346897',
+      user_name:            'arvindkushwah9@gmail.com',
+      password:             '9752368663',
       authentication:       'plain',
       enable_starttls_auto: true  }
 

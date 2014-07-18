@@ -5,6 +5,9 @@ Rails.application.eager_load! if Rails.env.development?
 
 Peatio::Application.routes.draw do
 
+  post "credits/create"
+  get "credits/new"
+  #get '/create' => 'credits#create', :as => :create
   root 'welcome#index'
 
   if Rails.env.development?

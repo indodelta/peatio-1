@@ -17,3 +17,5 @@ I, [2014-07-15T18:14:56.819360 #8901]  INFO -- : Connected to AMQP broker (prefe
 	from lib/daemons/trade_executor_ctl:17:in `block in <main>'
 	from lib/daemons/trade_executor_ctl:7:in `times'
 	from lib/daemons/trade_executor_ctl:7:in `<main>'
+peatio:amqp:trade_executor:3: process with pid 22204 started.
+I, [2014-07-18T14:13:09.911353 #22204]  INFO -- : Connected to AMQP broker (prefetch: 5)
