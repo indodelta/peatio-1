@@ -1,0 +1,33 @@
+.row
+  .col-md-4
+    Add credits manually
+    br/
+    = render "form",:locals=>{:@credit=>@credit}
+  .col-md-8
+    All Credits
+    table.table.table-striped.table-condensed
+      thead
+        tr
+          th Amount
+          th Currency
+          th Created at
+          th Action
+      tbody
+        - Credit.all.try(:reverse).each do |credit|
+          tr
+            td= credit.amount
+            td= credit.currency
+            td= credit.created_at
+            td= link_to "Delete", credits_delete_path(:id=> credit.id)
+br/            
+.row
+  .col-md-6
+    strong
+      Total Total LTC Credit
+    br/
+    = total_ltc_credit
+  .col-md-6
+    strong  
+      Total Total BTC Credit
+    br/
+    = total_btc_credit

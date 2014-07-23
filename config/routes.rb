@@ -7,6 +7,7 @@ Peatio::Application.routes.draw do
 
   post "credits/create"
   get "credits/new"
+  get "credits/delete"
   #get '/create' => 'credits#create', :as => :create
   root 'welcome#index'
 

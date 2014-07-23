@@ -268,4 +268,11 @@ module ApplicationHelper
     locals = {app_activated: app_activated, sms_activated: sms_activated}
     render partial: 'shared/two_factor_auth', locals: locals
   end
+
+  def total_ltc_credit
+     Credit.all.collect{ |p| p.amount if p.currency=="ltc"}.try(:flatten).try(:compact).try(:sum)
+  end
+  def total_btc_credit
+     Credit.all.collect{ |p| p.amount if p.currency=="btc"}.try(:flatten).try(:compact).try(:sum)
+  end
 end

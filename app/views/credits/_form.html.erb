@@ -1,9 +1,0 @@
-<%= form_for @credit ,:url=> credits_create_path do |f| %> 
-  <%= f.label :currency %>:
-  <%= f.select :currency, options_for_select([["BTC" , "btc" ],["LTC" , "ltc" ]] ) %><br />
-  
-  <%= f.label :amount %>:
-  <%= f.text_field :amount ,:required=>true%><br /><br />
-
-  <%= f.submit "Submit" %>
-<% end %>

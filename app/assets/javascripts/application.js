@@ -3,7 +3,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//
+//= require jquery_validation
 //= require scrollIt
 //= require moment
 //= require bignumber
