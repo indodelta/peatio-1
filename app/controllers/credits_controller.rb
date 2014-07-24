@@ -1,4 +1,5 @@
 class CreditsController < ApplicationController
+    before_filter :auth_member!
 
   def new
   	@credit = Credit.new

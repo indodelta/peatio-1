@@ -275,4 +275,13 @@ module ApplicationHelper
   def total_btc_credit
      Credit.all.collect{ |p| p.amount if p.currency=="btc"}.try(:flatten).try(:compact).try(:sum)
   end
+
+  def member_total_btc_credit
+    current_user.credits.collect{ |p| p.amount if p.currency=="btc"}.try(:flatten).try(:compact).try(:sum)
+
+  end
+
+  def member_total_ltc_credit
+     current_user.credits.collect{ |p| p.amount if p.currency=="ltc"}.try(:flatten).try(:compact).try(:sum)
+  end
 end

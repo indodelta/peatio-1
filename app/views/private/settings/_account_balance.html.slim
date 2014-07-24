@@ -12,3 +12,19 @@
             tr class="#{account.currency}"
               td.name = t("currency.name.#{account.currency}", default: account.currency_obj.code.upcase)
               td.available = account.balance
+.panel.panel-default.account-balance
+  .panel-heading
+    h2.panel-title = t('Credits')
+  .panel-body
+    .col-md-12
+      table.table.table-condensed.table-striped
+        thead: tr
+            th  Currency
+            th  Balance
+        tbody
+            tr 
+              td = 'BTC'
+              td = member_total_btc_credit
+            tr class=""
+              td = 'LTC'
+              td = member_total_ltc_credit

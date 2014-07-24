@@ -2,8 +2,10 @@
     = f.label :currency
     = f.select :currency, options_for_select([["BTC" , "btc" ],["LTC" , "ltc" ]] )
     br/
+    br/
     = f.label :member_id
     = f.select :member_id, options_for_select(Member.all.collect {|u| [u.email, u.id]} )
+    br/
     br/
   	= f.label :amount
   	= f.text_field :amount, :id=>"f4",:class=>"LV_validation_message"
