@@ -6,7 +6,6 @@
         .panel-body
           = description_for :currency do
             = item_for :sum, Account.balance_sum(c.code) + Account.locked_sum(c.code)
-            = item_for :locked, Account.locked_sum(c.code)
             = item_for :balance, Account.balance_sum(c.code)
             - if c.coin?
               = item_for :'hot-wallet', c.api.safe_getbalance
