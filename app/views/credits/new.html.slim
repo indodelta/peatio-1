@@ -10,6 +10,7 @@
         tr
           th Amount
           th Currency
+          th Client
           th Created at
           th Action
       tbody
@@ -17,7 +18,8 @@
           tr
             td= credit.amount
             td= credit.currency
-            td= credit.created_at
+            td= credit.member.email
+            td= credit.created_at.strftime("%d/%m/%y")
             td= link_to "Delete", credits_delete_path(:id=> credit.id)
 br/            
 .row

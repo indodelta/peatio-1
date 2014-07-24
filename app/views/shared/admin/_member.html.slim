@@ -15,6 +15,6 @@
       = item_for member, :created_at
   = table_for(member.accounts, class: 'table table-condensed table-hover', model: Account) do |t|
     - t.column :currency_text, class: 'col-md-8'
-    - t.column :balance_and_locked, class: 'col-md-10' do |x|
-      span #{x.balance} / #{x.locked}
+    - t.column :balance, class: 'col-md-10' do |x|
+      span #{x.balance}
     - t.column :amount, class: 'col-md-6'
