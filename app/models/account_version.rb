@@ -55,11 +55,6 @@ class AccountVersion < ActiveRecord::Base
   def self.optimistically_lock_account_and_create!(balance, locked, attrs)
     attrs = attrs.symbolize_keys
    
-    a = attrs[:locked] 
-   attrs[:locked] =  attrs[:balance]
-   attrs[:balance] = a
-
-   
     attrs[:created_at] = Time.now
     attrs[:updated_at] = attrs[:created_at]
     attrs[:fun]        = Account::FUNS[attrs[:fun]]

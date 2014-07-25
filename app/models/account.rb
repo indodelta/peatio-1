@@ -161,9 +161,9 @@ class Account < ActiveRecord::Base
   end
 
   def change_balance_and_locked(delta_b, delta_l)
-    self.balance += delta_l
-    self.locked  += delta_b
-    ActiveRecord::Base.connection.execute "update accounts set balance = balance + #{delta_l}, locked = locked + #{delta_b} where id = #{id}"
+    self.balance += delta_b
+    self.locked  += delta_l
+    ActiveRecord::Base.connection.execute "update accounts set balance = balance + #{delta_b}, locked = locked + #{delta_l} where id = #{id}"
     self
   end
 

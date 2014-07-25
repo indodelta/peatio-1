@@ -17,12 +17,16 @@ module Concerns
 
     def order_submit
       begin
-        Ordering.new(@order).submit
-        render status: 200, json: success_result
+        if check_credit
+          Ordering.new(@order).submit
+          render status: 200, json: success_result
+        else
+          render status: 500, json: credit_error_result(@order)
+        end 
       rescue
         Rails.logger.warn "Member id=#{current_user.id} failed to submit order: #{$!}"
         Rails.logger.warn params.inspect
-        Rails.logger.warn $!.backtrace[0,20].join("\n")
+        #Rails.logger.warn $!.backtrace[0,20].join("\n")
         render status: 500, json: error_result(@order.errors)
       end
     end
@@ -37,9 +41,28 @@ module Concerns
     def error_result(args)
       Jbuilder.encode do |json|
         json.result false
-        json.message I18n.t("private.markets.show.error")
+        json.message 'I18n.t("private.markets.show.error")'
         json.errors args
       end
     end
+
+    def credit_error_result(args)
+      Jbuilder.encode do |json|
+        json.result false
+        json.message 'you have not sufficient credit balance .'
+        json.errors args
+      end
+    end
+
+    def check_credit
+      if !current_user.credits.blank?
+        return true
+      else
+        return false
+      end
+    end
+
+
+
   end
 end

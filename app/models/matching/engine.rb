@@ -5,7 +5,6 @@ module Matching
     delegate :ask_orders, :bid_orders, to: :orderbook
 
     def initialize(market)
-      debugger
       @market        = market
       @orderbook     = OrderBookManager.new(market.id)
     end
