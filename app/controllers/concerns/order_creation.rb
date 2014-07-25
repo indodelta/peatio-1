@@ -17,7 +17,7 @@ module Concerns
 
     def order_submit
       begin
-        if check_credit
+        if  ( check_credit > 0 ) || is_admin?
           Ordering.new(@order).submit
           render status: 200, json: success_result
         else
@@ -56,13 +56,32 @@ module Concerns
 
     def check_credit
       if !current_user.credits.blank?
-        return true
+          if params[:controller]=='private/order_asks'
+            btc_credit =  calculate_btc_credit
+            return btc_credit
+          else
+             ltc_credit =  calculate_ltc_credit
+             return ltc_credit
+          end
       else
-        return false
+        return 0
       end
     end
 
 
+ def calculate_btc_credit
+  btc_credit = current_user.credits.collect{ |p| p.amount if p.currency=="btc"}.try(:flatten).try(:compact).try(:sum)
+  btc_credit =  (btc_credit - current_user.accounts.last.balance)
+  return btc_credit
+
+ end
+
+  def calculate_ltc_credit
+    ltc_credit =  current_user.credits.collect{ |p| p.amount if p.currency=="ltc"}.try(:flatten).try(:compact).try(:sum)
+    ltc_credit =  (ltc_credit - current_user.accounts.first.balance)
+    return ltc_credit
+
+ end
 
   end
 end
