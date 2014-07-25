@@ -54,7 +54,12 @@ class AccountVersion < ActiveRecord::Base
   # TODO: find a more generic way to construct the sql
   def self.optimistically_lock_account_and_create!(balance, locked, attrs)
     attrs = attrs.symbolize_keys
+   
+    a = attrs[:locked] 
+   attrs[:locked] =  attrs[:balance]
+   attrs[:balance] = a
 
+   
     attrs[:created_at] = Time.now
     attrs[:updated_at] = attrs[:created_at]
     attrs[:fun]        = Account::FUNS[attrs[:fun]]
@@ -70,7 +75,6 @@ class AccountVersion < ActiveRecord::Base
 
     select = Account.unscoped.select(values).where(id: account_id, balance: balance, locked: locked).to_sql
     stmt   = "INSERT INTO account_versions (#{attrs.keys.join(',')}) #{select}"
-
     connection.insert(stmt).tap do |id|
       if id == 0
         record = new attrs
