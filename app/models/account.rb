@@ -64,6 +64,7 @@ class Account < ActiveRecord::Base
   end
 
   def sub_funds(amount, fee: ZERO, reason: nil, ref: nil)
+    debugger
     (amount <= ZERO or amount > self.balance) and raise AccountError, "cannot subtract funds (amount: #{amount})"
     change_balance_and_locked -amount, 0
   end
@@ -161,9 +162,12 @@ class Account < ActiveRecord::Base
   end
 
   def change_balance_and_locked(delta_b, delta_l)
-    self.balance += delta_b
-    self.locked  += delta_l
-    ActiveRecord::Base.connection.execute "update accounts set balance = balance + #{delta_b}, locked = locked + #{delta_l} where id = #{id}"
+    # self.balance += delta_b
+    # self.locked  += delta_l
+
+     self.balance += delta_l
+     self.locked  += delta_l
+    ActiveRecord::Base.connection.execute "update accounts set balance = balance + #{delta_l}, locked = locked + #{delta_l} where id = #{id}"
     self
   end
 

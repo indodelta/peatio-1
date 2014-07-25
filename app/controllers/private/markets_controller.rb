@@ -10,7 +10,6 @@ module Private
 
       # @bid = "btc"
       # @ask = "drk"
-
       @ask_name = I18n.t("currency.name.#{@ask}")
       @bid_name = I18n.t("currency.name.#{@bid}")
 
